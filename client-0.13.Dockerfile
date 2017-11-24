@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER kuiki <911yinhui911@163.com>
 
-ARG FRP_VERSION=0.14.0
+ARG FRP_VERSION=0.13.0
 
 WORKDIR /tmp
 
@@ -16,8 +16,7 @@ COPY conf/frpc_min.ini /frp/conf/frpc.ini
 COPY conf/frps_min.ini /frp/conf/frps.ini
 
 VOLUME /frp/conf
-EXPOSE 80 443 7000 7500
 
 WORKDIR /frp
-ENTRYPOINT ./frps -c ./conf/frps.ini
+ENTRYPOINT ./frpc -c ./conf/frpc.ini
 

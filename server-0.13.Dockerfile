@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER kuiki <911yinhui911@163.com>
 
-ARG FRP_VERSION=0.14.0
+ARG FRP_VERSION=0.13.0
 
 WORKDIR /tmp
 
